@@ -3,10 +3,9 @@ class CSVfile:
 		self.name = name
 	
 	def get_data(self):
+        my_file = open(self.name, 'r')
 
-		my_file = open(self.name, 'r')
-
-		data=[]
+		data=[] 
 
 		for line in my_file:
 			
