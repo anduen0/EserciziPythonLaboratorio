@@ -1,5 +1,8 @@
 from CSVfile import CSVfile
+from NumericalCSVFile import NumericalCSVFile
 
-my_csv_file = CSVfile('./shampoo_sales.csv')
-print(my_csv_file.get_data())
+# csvFile = CSVfile('./shampoo_sales.csv')
+numericalCSV = NumericalCSVFile('./shampoo_sales.csv')
+
+print(numericalCSV.get_data())
 
