@@ -6,7 +6,13 @@ class NumericalCSVFile(CSVfile):
         data = []
 
         for i in range(len(elements)):
-            if(i != 0): dato = float(elements[i][1])
-            else: dato = elements[i][1]
-            data.append([elements[i][0], dato])
+            try:
+                if i == 0:
+                    dato = elements[i][1]
+                else:
+                    dato = float(elements[i][1])
+                    data.append([elements[i][0], dato])
+            except Exception as e:
+                print("Errore verificato: " + str(e))
+                continue
         return data
