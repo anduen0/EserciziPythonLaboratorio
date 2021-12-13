@@ -1,6 +1,7 @@
 from CSVfile import CSVfile
 from NumericalCSVFile import NumericalCSVFile
 from incrementalModel import IncrementModel
+from FitIncrementalModle import FitIncrementalModle
 
 # csvFile = CSVfile('./shampoo_sales.csv')
 # try:
@@ -10,5 +11,8 @@ from incrementalModel import IncrementModel
 #     print("Expection: {}".format(str(e)))
 
 incModl = IncrementModel()
-print(incModl.predict([50, 52, 60]))
+fitModl = FitIncrementalModle()
+dataframe = [8, 19, 31, 41]
+current = [50, 52, 60]
 
+print(fitModl.predict(dataframe, current))

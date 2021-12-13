@@ -2,10 +2,16 @@ from models import Model
 
 
 class IncrementModel(Model):
-    def predict(self, data):
-        prediction = 0
+    def avgIncrease(self, data):
+        averageIncrease = 0
         length = len(data)
         for item in range(length):
-            if item < length-1:
-                prediction += abs(data[item] - data[item + 1])
-        return prediction/(length-1) + data[length-1]
+            if item < length - 1:
+                print(data[item])
+                averageIncrease += data[item + 1] - data[item]
+
+        return averageIncrease / (length-1)
+
+    def predict(self, data):
+        avgIncrease = self.avgIncrease(data)
+        return data[-1] + avgIncrease
