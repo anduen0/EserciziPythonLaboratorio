@@ -7,7 +7,6 @@ class IncrementModel(Model):
         length = len(data)
         for item in range(length):
             if item < length - 1:
-                print(data[item])
                 averageIncrease += data[item + 1] - data[item]
 
         return averageIncrease / (length-1)

@@ -3,11 +3,11 @@ from incrementalModel import IncrementModel
 class FitIncrementalModle(IncrementModel):
 
 
-    def fit(self, dataframe):
-        return super().avgIncrease(dataframe)
+    def fit(self, dataset):
+        return super().avgIncrease(dataset)
 
-    def predict(self,dataframe, current):
-        avg_increment = self.fit(dataframe)
+    def predict(self, dataset, current):
+        avg_increment = self.fit(dataset)
         currentAverageIncrease = super().avgIncrease(current)
         return current[-1] + ((avg_increment + currentAverageIncrease) / 2)
 

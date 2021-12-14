@@ -12,7 +12,14 @@ from FitIncrementalModle import FitIncrementalModle
 
 incModl = IncrementModel()
 fitModl = FitIncrementalModle()
-dataframe = [8, 19, 31, 41]
+dataset = [8, 19, 31, 41]
 current = [50, 52, 60]
 
+
+
+print(incModl.predict(current))
+
+
+
 print(fitModl.predict(dataframe, current))
+
