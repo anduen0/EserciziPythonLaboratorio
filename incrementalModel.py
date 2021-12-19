@@ -2,6 +2,9 @@ from models import Model
 
 
 class IncrementModel(Model):
+    def __str__(self):
+        return 'IncrementModel'
+
     def avgIncrease(self, data):
         averageIncrease = 0
         length = len(data)
